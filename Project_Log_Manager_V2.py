@@ -8,7 +8,7 @@ Best of luck!
 - William Cheng, RU '19
 
 Work in Progress:
-- To-do list is not being copied
+- Add ability to open last created file
 - Make GUI for this program
 - Add compatability for windows when changing file paths
 - Allow directories that do not exist to be created
@@ -104,7 +104,7 @@ def getProjNameandPath(dataBase):
     countProject = 1;
     showOptions = True;
 
-    print(50*"\n"); # Gives a nice spacing to the code
+    print(50*"\n"); # Gives a nice spacing to the program
 
     print("Current Projects:")
     for row in dataBase:
