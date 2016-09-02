@@ -8,7 +8,7 @@ Best of luck!
 - William Cheng, RU '19
 
 Work in Progress:
-- Add ability to open last created file
+- Add ability to open last created project log
 - Make GUI for this program
 - Add compatability for windows when changing file paths
 - Allow directories that do not exist to be created
@@ -28,7 +28,7 @@ import subprocess
 import traceback
 
 # Very big welcome to anyone who runs this application
-version_date = ["2.0", "August 25, 2016"];
+version_date = ["2.1", "August 29, 2016"];
 print(
 "{0}\nWELCOME to William Cheng's\nProject_Log_Manager Verion {1}\nModified on {2}\n{3}".format(50 * "\n" + 10 * "*",
                                                                                                version_date[0],
@@ -428,8 +428,6 @@ def openFile(logFolder, logFile, app=applicationOpenWith):
 
 def createLog(dataBase):
     logCreated = False;
-    # Set desired file path of Project_DataBase.csv
-    changePath(path);
 
     # These few lines sets time variables
     date = time.strftime("%Y_%m_%d", time.localtime());
@@ -526,6 +524,8 @@ def createLog(dataBase):
 
 # Safeguards against losing information in the CSV if an unexpected error occurs
 while (True):
+    # Set desired file path of Project_DataBase.csv
+    changePath(path);
     backup_database = extractCSV();
 
     try:
