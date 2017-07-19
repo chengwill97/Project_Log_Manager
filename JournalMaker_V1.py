@@ -29,7 +29,7 @@ import traceback
 import re
 
 # Very big welcome to anyone who runs this application
-version_date = ["2.1", "August 29, 2016"];
+version_date = ["2.3", "July 19, 2017"];
 print(
 "{0}\nWELCOME to William Cheng's\nProject_Log_Manager Verion {1}\nModified on {2}\n{3}".format(50 * "\n" + 10 * "*",
                                                                                                version_date[0],
